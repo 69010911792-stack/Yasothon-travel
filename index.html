@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ยโสธรบ้านเฮา | Yasothon Travel Guide</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:'Kanit',sans-serif;
+  background:#f7f3e9;
+  color:#243b3b;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#0d5c63;
+  padding:15px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 3px 15px #0003;
+}
+
+.logo{
+  color:white;
+  font-size:25px;
+  font-weight:700;
+}
+
+.menu{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+}
+
+.menu a:hover{
+  color:#ffd85c;
+}
+
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  padding:70px 8%;
+  background:linear-gradient(135deg,#0d5c63,#167d7f);
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-text{
+  max-width:650px;
+  position:relative;
+  z-index:2;
+}
+
+.hero small{
+  color:#ffd85c;
+  font-size:18px;
+}
+
+.hero h1{
+  font-size:75px;
+  line-height:1;
+  margin:15px 0;
+}
+
+.hero h2{
+  font-size:35px;
+  color:#ffd85c;
+  margin:0 0 20px;
+}
+
+.hero p{
+  font-size:19px;
+  line-height:1.8;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:13px 25px;
+  background:#ffd85c;
+  color:#173f42;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.rocket{
+  position:absolute;
+  right:10%;
+  font-size:180px;
+  transform:rotate(-25deg);
+  animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+  50%{transform:rotate(-25deg) translateY(-20px);}
+}
+
+section{
+  padding:75px 8%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.title h2{
+  font-size:40px;
+  color:#0d5c63;
+  margin:0;
+}
+
+.title p{
+  color:#777;
+}
+
+.about{
+  background:white;
+}
+
+.about-box{
+  max-width:950px;
+  margin:auto;
+  font-size:18px;
+  line-height:2;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 5px 20px #0002;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card-img{
+  height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:70px;
+  background:#d9eeee;
+}
+
+.card-content{
+  padding:22px;
+}
+
+.card h3{
+  color:#0d5c63;
+  margin-top:0;
+  font-size:22px;
+}
+
+.card p{
+  line-height:1.7;
+  color:#555;
+}
+
+#food{
+  background:#fff;
+}
+
+#hotel{
+  background:#eaf4f3;
+}
+
+#souvenir{
+  background:#fff;
+}
+
+.info{
+  background:#0d5c63;
+  color:white;
+  text-align:center;
+}
+
+.info .title h2{
+  color:#ffd85c;
+}
+
+footer{
+  background:#07383d;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
+
+@media(max-width:700px){
+  nav{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero h2{
+    font-size:27px;
+  }
+
+  .rocket{
+    opacity:.2;
+    right:0;
+  }
+
+  .menu{
+    justify-content:center;
+    gap:12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">🌾 YASOTHON</div>
+
+  <div class="menu">
+    <a href="#home">หน้าแรก</a>
+    <a href="#about">ประวัติ</a>
+    <a href="#travel">ท่องเที่ยว</a>
+    <a href="#food">อาหาร</a>
+    <a href="#hotel">ที่พัก</a>
+    <a href="#souvenir">ของฝาก</a>
+    <a href="#district">อำเภอ</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+
+  <div class="hero-text">
+
+    <small>🌾 จังหวัดยโสธร • อีสานบ้านเฮา</small>
+
+    <h1>ยโสธร</h1>
+
+    <h2>เมืองที่เสียงบั้งไฟพาใจกับบ้าน</h2>
+
+    <p>
+      เมืองเก่าแก่กว่า 200 ปี
+      เต็มไปด้วยเรื่องราวทางประวัติศาสตร์
+      วัฒนธรรม ประเพณี และวิถีชีวิตที่มีเอกลักษณ์
+    </p>
+
+    <a href="#travel" class="btn">เที่ยวไปนำกัน →</a>
+
+  </div>
+
+  <div class="rocket">🚀</div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <div class="title">
+    <h2>📖 รู้จักยโสธร</h2>
+    <p>เรื่องราวและประวัติความเป็นมาของจังหวัด</p>
+  </div>
+
+  <div class="about-box">
+
+    <p>
+      จังหวัดยโสธรเป็นจังหวัดหนึ่งในภาคตะวันออกเฉียงเหนือ
+      มีประวัติความเป็นมายาวนานกว่า 200 ปี
+      และมีความเกี่ยวข้องกับประวัติศาสตร์ของเมืองในภาคอีสาน
+    </p>
+
+    <p>
+      เดิมบริเวณบ้านสิงห์ท่าได้รับการยกฐานะเป็นเมือง
+      และพระราชทานนามว่า “เมืองยศสุนทร”
+      ต่อมาชื่อได้เปลี่ยนเป็น “ยโสธร”
+      และใช้ชื่อนี้มาจนถึงปัจจุบัน
+    </p>
+
+    <p>
+      วันที่ 1 มีนาคม พ.ศ. 2515
+      จังหวัดยโสธรได้รับการจัดตั้งขึ้นเป็นจังหวัด
+      โดยแยกพื้นที่ออกจากจังหวัดอุบลราชธานี
+      และเป็นจังหวัดที่ 71 ของประเทศไทย
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="travel">
+
+  <div class="title">
+    <h2>🗺️ แหล่งท่องเที่ยว</h2>
+    <p>สถานที่น่าเที่ยวของจังหวัดยโสธร</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-img">🐸</div>
+      <div class="card-content">
+        <h3>พิพิธภัณฑ์พญาคันคาก</h3>
+        <p>
+          แลนด์มาร์กสำคัญของยโสธร
+          ตั้งอยู่บริเวณวิมานพญาแถน
+          ถ่ายทอดเรื่องราวตำนานพญาคันคาก
+          และความเชื่อที่เกี่ยวข้องกับประเพณีบุญบั้งไฟ
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🛕</div>
+      <div class="card-content">
+        <h3>พระธาตุก่องข้าวน้อย</h3>
+        <p>
+          โบราณสถานสำคัญของจังหวัด
+          มีรูปแบบสถาปัตยกรรมที่ได้รับอิทธิพลจากศิลปะขอม
+          และมีตำนานพื้นบ้านที่น่าสนใจ
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🙏</div>
+      <div class="card-content">
+        <h3>วัดมหาธาตุ</h3>
+        <p>
+          วัดคู่บ้านคู่เมืองยโสธร
+          ภายในมีพระธาตุอานนท์ หอไตรกลางน้ำ
+          และพระพุทธบุษยรัตน์หรือพระแก้วหยดน้ำค้าง
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🏯</div>
+      <div class="card-content">
+        <h3>ศาลเจ้าพ่อหลักเมือง</h3>
+        <p>
+          ศูนย์รวมจิตใจของชาวยโสธร
+          มีสถาปัตยกรรมที่ผสมผสานศิลปะจีน ไทย และลาว
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">⛪</div>
+      <div class="card-content">
+        <h3>โบสถ์คริสต์บ้านซ่งแย้</h3>
+        <p>
+          โบสถ์ไม้ขนาดใหญ่ที่มีชื่อเสียง
+          เป็นสถานที่สำคัญทางศาสนาและวัฒนธรรม
+          ของชุมชนบ้านซ่งแย้
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🏘️</div>
+      <div class="card-content">
+        <h3>ย่านเก่าบ้านสิงห์ท่า</h3>
+        <p>
+          ย่านเมืองเก่าที่มีบ้านเรือนและสถาปัตยกรรม
+          ผสมผสานศิลปะจีนและยุโรป
+          สะท้อนประวัติศาสตร์ของเมืองยโสธร
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="food">
+
+  <div class="title">
+    <h2>🍜 อาหารอร่อย</h2>
+    <p>ชิมของอร่อยแบบคนยโสธร</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-img">🍲</div>
+      <div class="card-content">
+        <h3>บ้านคุณย่า</h3>
+        <p>ร้านอาหารหลากหลาย มีทั้งอาหารจานเดียว อาหารอีสาน เบเกอรี และชาบู</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🍜</div>
+      <div class="card-content">
+        <h3>ก๋วยเตี๋ยวหลบซอย</h3>
+        <p>ร้านก๋วยเตี๋ยวชื่อดังในเลิงนกทา รสชาติกลมกล่อมและมีเมนูหลากหลาย</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🦐</div>
+      <div class="card-content">
+        <h3>แซบอิหลี ยโสธร</h3>
+        <p>โดดเด่นด้วยเมนูกุ้งแม่น้ำและอาหารไทย เหมาะสำหรับมารับประทานเป็นกลุ่ม</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🥗</div>
+      <div class="card-content">
+        <h3>แม่อ้อมลาบเป็ด</h3>
+        <p>ร้านอาหารที่มีเมนูจากเป็ดและอาหารอีสานรสแซบ</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="hotel">
+
+  <div class="title">
+    <h2>🏨 ที่พัก</h2>
+    <p>พักผ่อนสบาย ๆ ในยโสธร</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-img">🏨</div>
+      <div class="card-content">
+        <h3>The Greenpark Grand Hotel</h3>
+        <p>โรงแรมสไตล์โมเดิร์น มีสิ่งอำนวยความสะดวกหลากหลาย เหมาะสำหรับการพักผ่อน</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🛏️</div>
+      <div class="card-content">
+        <h3>The Zen Hotel</h3>
+        <p>ที่พักบรรยากาศเรียบง่าย ห้องพักสะดวกสบาย เหมาะสำหรับนักเดินทาง</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🏩</div>
+      <div class="card-content">
+        <h3>The Colour Hotel</h3>
+        <p>โรงแรมที่มีห้องพักตกแต่งหลากหลายสไตล์ เหมาะสำหรับการพักผ่อน</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🌿</div>
+      <div class="card-content">
+        <h3>Zigzag Resort</h3>
+        <p>รีสอร์ตบรรยากาศเงียบสงบ เหมาะสำหรับครอบครัวและกลุ่มเพื่อน</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="souvenir">
+
+  <div class="title">
+    <h2>🎁 ของฝาก</h2>
+    <p>ของดีจากเมืองยโสธร</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-img">🌾</div>
+      <div class="card-content">
+        <h3>ข้าวหอมมะลิ</h3>
+        <p>ผลิตภัณฑ์ทางการเกษตรสำคัญของจังหวัดและเป็นหนึ่งในเอกลักษณ์ของยโสธร</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🍉</div>
+      <div class="card-content">
+        <h3>แตงโม</h3>
+        <p>แตงโมหวานจากแหล่งผลิตในจังหวัด เหมาะสำหรับซื้อกลับไปเป็นของฝาก</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🧵</div>
+      <div class="card-content">
+        <h3>หมอนขวานผ้าขิด</h3>
+        <p>งานหัตถกรรมพื้นบ้านที่มีเอกลักษณ์และสะท้อนภูมิปัญญาของชาวยโสธร</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🐟</div>
+      <div class="card-content">
+        <h3>ปลาส้ม</h3>
+        <p>อาหารพื้นบ้านรสชาติเป็นเอกลักษณ์ สามารถนำไปประกอบอาหารได้หลายเมนู</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">🧺</div>
+      <div class="card-content">
+        <h3>งานจักสาน</h3>
+        <p>ผลิตภัณฑ์จากภูมิปัญญาท้องถิ่น เช่น กระติบข้าว ตะกร้า หมวก และเครื่องใช้ต่าง ๆ</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="info" id="district">
+
+  <div class="title">
+    <h2>🏘️ อำเภอในจังหวัดยโสธร</h2>
+    <p style="color:white;">พื้นที่ต่าง ๆ ของจังหวัดยโสธร</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-content">
+        <h3>อำเภอเมืองยโสธร</h3>
+        <p>ศูนย์กลางการปกครอง เศรษฐกิจ และการท่องเที่ยวของจังหวัด</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>อำเภอกุดชุม</h3>
+        <p>พื้นที่ที่มีวิถีชีวิตและภูมิปัญญาท้องถิ่นที่น่าสนใจ</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>อำเภอเลิงนกทา</h3>
+        <p>อำเภอที่มีแหล่งท่องเที่ยวและอาหารท้องถิ่นที่น่าสนใจ</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>อำเภอคำเขื่อนแก้ว</h3>
+        <p>พื้นที่ที่มีประวัติศาสตร์และชุมชนท้องถิ่นที่มีเอกลักษณ์</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>อำเภอมหาชนะชัย</h3>
+        <p>มีพื้นที่เกษตรกรรมและวิถีชีวิตแบบอีสาน</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h3>อำเภอป่าติ้ว</h3>
+        <p>มีชุมชนและงานหัตถกรรมพื้นบ้านที่น่าสนใจ</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  <h2>🌾 ยโสธรบ้านเฮา</h2>
+  <p>เว็บไซต์แนะนำจังหวัดยโสธร</p>
+  <p>จัดทำเพื่อการศึกษา</p>
+</footer>
+
+</body>
+</html>
